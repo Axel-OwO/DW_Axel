@@ -28,7 +28,10 @@ public class ContrladorUsuario {
         return sUsuario.ObtenerTodos();
     }
     
-    
+    @GetMapping("/login")
+    public String existe(String usuario, String contra){
+        return sUsuario.existeUser(usuario, contra);
+    }
     
     @PostMapping("")
     public List<Usuario> insertarUsuario(@RequestBody Usuario a){

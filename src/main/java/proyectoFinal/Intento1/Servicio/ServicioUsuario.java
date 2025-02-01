@@ -69,5 +69,9 @@ public class ServicioUsuario {
         return rUsuario.findAll();
     }
     
+    public String existeUser(String usuario, String contra){
+        return rUsuario.existeUser(usuario, contra);
+    }
+    
     
 }

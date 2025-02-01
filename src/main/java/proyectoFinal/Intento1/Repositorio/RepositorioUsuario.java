@@ -12,6 +12,7 @@ import proyectoFinal.Intento1.Entidad.Usuario;
 
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario,String>{
-    
+    @Query(value="select usuario from usuario where nombre = ?1 and contra = ?2",nativeQuery=true)
+    String existeUser(String usuario, String contra);
 //    
 }
